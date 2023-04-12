@@ -73,7 +73,7 @@ const forcastWeatherImage = document.querySelector('.forecast-weather__image')
 //             <p class="forecast-weather__date-month
 
 function fetchWeather(location) {
-  return fetch(`http://api.weatherapi.com/v1/forecast.json?key=8bb9a15b5de548d1918160428230604&lang=ru&days=2&q=${location}&aqi=yes`)
+  return fetch(`https://api.weatherapi.com/v1/forecast.json?key=8bb9a15b5de548d1918160428230604&lang=ru&days=2&q=${location}&aqi=yes`)
     .then(res => {
       if (res.ok) {
         return res.json()
@@ -96,17 +96,17 @@ function renderCurrentWeather(weather) {
   currentLocation.textContent = name
 }
 
-function renderForecast(weather) {
-  const {
-    current: { temp_c, condition: { text, icon } },
-    location: { localtime_epoch, name }
-  } = weather
-  weatherTemperature.textContent = temp_c
-  weatherDescription.textContent = text
-  weatherImage.src = icon
-  currentDate.textContent = createCurrentDate(localtime_epoch)
-  currentLocation.textContent = name
-}
+// function renderForecast(weather) {
+//   const {
+//     current: { temp_c, condition: { text, icon } },
+//     location: { localtime_epoch, name }
+//   } = weather
+//   weatherTemperature.textContent = temp_c
+//   weatherDescription.textContent = text
+//   weatherImage.src = icon
+//   currentDate.textContent = createCurrentDate(localtime_epoch)
+//   currentLocation.textContent = name
+// }
 
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -142,33 +142,6 @@ console.log(createCountryCode(str))
 
 
 
-
-
-
-
-function getProperty(obj, path) {
-  let string = path.split('.')
-
-  let res = obj
-
-  for (let i = 0; i < string.length; i++) {
-    res = res[string[i]]
-  }
-
-
-  return res
-}
-
-const object = {
-  one: 1,
-  two: {
-    three: 3
-  },
-  four: 4
-};
-
-console.log(getProperty(object, 'one')); // 1
-console.log(getProperty(object, 'two.three')); // 3
 
 
 
