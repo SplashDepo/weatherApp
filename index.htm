@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <form class="form-weather">
+        <input class="form-weather__input-location" type="text">
+        <button class="test-weather" type="submit">Получить</button>
+      </form>
+    </header>
+    <main class="content">
+      <div class="grid-container">
+        <article class="current-weather">
+          <h2 class="current-weather__title">Сейчас</h2>
+          <div class="current-weather__stats-wrap">
+            <p class="current-weather__temp">25&deg;<sup>c</sup></p>
+            <img class="current-weather__image" src="#" alt="#">
+          </div>
+          <p class="current-weather__description">Overcast</p>
+          <ul class="current-weather__list">
+            <li class="current-weather__item">
+              <span class="current-weather__icon"></span>
+              <p class="current-weather__date">Суббота 8 апр</p>
+            </li>
+            <li class="current-weather__item">
+              <span class="current-weather__icon"></span>
+              <p class="current-weather__location">Ryazan, RU</p>
+            </li>
+          </ul>
+        </article>
+      </div>
+      <article class="forecast-weather">
+        <h2 class="forecast-weather__title">Прогноз на 5 дней</h2>
+        <ul class="forecast-weather__list">
+          <li class="forecast-weather__item">
+            <p class="forecast-weather__temp"><span class="forecast-weather__icon"></span>22/11</p>
+            <p class="forecast-weather__date-day">Пн 12</p>
+            <p class="forecast-weather__date-month">Июль</p>
+          </li>
+        </ul>
+      </article>
+    </main>
+    <!-- <div class="block"></div>
+    <div class="search-location">
+      <form class="search-form" name="search-form">
+        <label class="search-form__field">
+          <input class="search-form__input" type="text" name="location">
+        </label>
+        <button class="search-form__button" type="submit">Показать</button>
+      </form>
+    </div>
+    <div class="weather">
+      <div class="weather__current-info">
+        <h1 class="weather__region"></h1>
+        <div class="weather__stats">
+          <div class="weather__visual">
+            <img class="weather__current-icon" src="#" alt="иконка текущего состояния погоды">
+            <p class="weather__description"></p>
+          </div>
+          <ul class="weather__conditions-list">
+            <li class="weather__item weather__item_type_"></li>
+            <li class="weather__item weather__item_type_"></li>
+            <li class="weather__item weather__item_type_temp-c"></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
